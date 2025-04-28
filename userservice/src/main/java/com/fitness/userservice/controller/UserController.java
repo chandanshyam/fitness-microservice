@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping("/{userId}/validate")
     public Boolean register(@Valid  @PathVariable String userId){
-        return userService.existsById(userId);
+        return userService.existsbyKeycloakId(userId);
     }
 
 
