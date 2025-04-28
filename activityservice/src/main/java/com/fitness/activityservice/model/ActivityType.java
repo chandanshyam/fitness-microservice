@@ -10,6 +10,7 @@ public enum ActivityType {
     HIIT,
     ROWING,
     STRETCHING,
+    GYM,
     OTHER
 
 
