@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useState } from "react";
-import { addActivitiy } from "../services/api";
+import { addActivity } from "../services/api";
 
 const ActivityForm = ({ onactivityAdded }) => {
   const [activity, setActivity] = useState({
@@ -19,9 +19,9 @@ const ActivityForm = ({ onactivityAdded }) => {
   });
 
   const handleSubmit = async (e) => {
-    e.preventDeault();
+    e.preventDefault();
     try {
-      await addActivitiy(activity);
+      await addActivity(activity);
       onactivityAdded();
       setActivity({
         type: "RUNNING",

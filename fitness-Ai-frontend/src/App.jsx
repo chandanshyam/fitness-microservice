@@ -10,9 +10,9 @@ import {
   useLocation,
 } from "react-router";
 import { setCredentials } from "./store/authSlice";
-import ActivityForm from "./compnents/ActivityForm";
-import ActivityList from "./compnents/ActivityList";
-import ActivityDetail from "./compnents/ActivityDetail";
+import ActivityForm from "./components/ActivityForm";
+import ActivityList from "./components/ActivityList";
+import ActivityDetail from "./components/ActivityDetail";
 
 const ActivitiesPage = () => {
   return (

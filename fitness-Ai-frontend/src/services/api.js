@@ -21,6 +21,6 @@ api.interceptors.request.use((config) => {
 });
 
 // export const getActivities = () => api.get("/activity");
-export const addActivitiy = (activity) => api.post("/activities", activity);
+export const addActivity = (activity) => api.post("/activities", activity);
 export const getActivityDetail = () =>
   api.get("/recommendations/activity/${id}");
