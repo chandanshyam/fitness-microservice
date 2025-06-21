@@ -22,7 +22,7 @@ const ActivityForm = ({ onactivityAdded }) => {
     e.preventDefault();
     try {
       await addActivity(activity);
-      onactivityAdded();
+      onActivitiesAdded();
       setActivity({
         type: "RUNNING",
         duration: "",
