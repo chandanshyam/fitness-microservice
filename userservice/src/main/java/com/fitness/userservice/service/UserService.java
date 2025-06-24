@@ -44,9 +44,6 @@ public class UserService {
 
        User savedUser =  repository.save(user);
 
-
-
-
        userResponse.setId(savedUser.getId());
        userResponse.setEmail(savedUser.getEmail());
        userResponse.setPassword(savedUser.getPassword());
@@ -61,11 +58,9 @@ public class UserService {
 
     public UserResponse getUserProfile(String userId) {
 
-        User user = repository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User Not Found"));
+        User user = repository.findById(userId).orElseThrow(() -> new RuntimeException("User Not Found"));
 
         UserResponse userResponse = new UserResponse();
-
         userResponse.setId(user.getId());
         userResponse.setEmail(user.getEmail());
         userResponse.setPassword(user.getPassword());
@@ -77,11 +72,11 @@ public class UserService {
         return userResponse;
      }
 
-    public Boolean existsById(@Valid String userId) {
-        log.info("Calling User Validation API for userId: {}", userId);
-        return repository.existsById(userId);
-    }
-
+//    public Boolean existsById(@Valid String userId) {
+//        log.info("Calling User Validation API for userId: {}", userId);
+//        return repository.existsById(userId);
+//    }
+//
 
 
     public Boolean existsbyKeycloakId(@Valid String userId) {

@@ -11,7 +11,9 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository  extends JpaRepository<User, String> {
     boolean existsByEmail(@NotBlank(message = "email is required") @Email(message = "Invalid email format") String email);
 
-    Boolean existsByKeycloakId(@Valid String userId);
+    boolean existsByKeycloakId(@Valid String userId);
 
     User findByEmail(String email);
+
+    User findByKeycloakId(String keycloakId);
 }
